@@ -1,0 +1,36 @@
+{
+  "devices": [
+    {
+      "id": "mock-keyboard",
+      "vid": 4660,
+      "pid": 22136,
+      "product": "Mock Keyboard",
+      "descriptor_hex": "1201000200000040341278560001010203010902200001010080320904000002030101000705810308000a07050202400000",
+      "permission": "ok"
+    }
+  ],
+  "events": [
+    {"sequence": 1, "kind": "attach", "device_id": "mock-keyboard"},
+    {
+      "sequence": 2,
+      "kind": "control_transfer",
+      "device_id": "mock-keyboard",
+      "transfer": {
+        "request": {"bmRequestType": 128, "bRequest": 6, "wValue": 256, "wIndex": 0, "wLength": 4},
+        "data_hex": "01020304",
+        "status": "completed"
+      }
+    },
+    {"sequence": 3, "kind": "detach", "device_id": "mock-keyboard"},
+    {
+      "sequence": 4,
+      "kind": "control_transfer",
+      "device_id": "mock-keyboard",
+      "detail": "device disappeared after detach",
+      "transfer": {
+        "request": {"bmRequestType": 128, "bRequest": 6, "wValue": 256, "wIndex": 0, "wLength": 0},
+        "data_hex": ""
+      }
+    }
+  ]
+}
