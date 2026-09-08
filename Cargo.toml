@@ -5,7 +5,7 @@ edition = "2024"
 rust-version = "1.85"
 description = "Offline USB descriptor and recorded-session inspection"
 license = "MIT"
-repository = "https://github.com/joshiii-xyz/usbwatch"
+repository = "https://github.com/yoshiii-xyz/usbwatch"
 keywords = ["usb", "descriptors", "hotplug", "inspection"]
 categories = ["command-line-utilities", "hardware-support"]
 
